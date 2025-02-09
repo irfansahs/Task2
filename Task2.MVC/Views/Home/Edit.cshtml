@@ -1,0 +1,27 @@
+@model Task2.Domain.Entities.Product
+
+<h2>Ürünü Düzenle</h2>
+
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <label>Ürün Adı:</label>
+    <input type="text" name="Name" value="@Model.Name" required />
+    <br />
+
+    <label>Ürün Kodu:</label>
+    <input type="text" name="Code" value="@Model.Code" required />
+    <br />
+
+    <label>Fiyat:</label>
+    <input type="number" step="0.01" name="Price" value="@Model.Price" required />
+    <br />
+
+    <label>Resim URL:</label>
+    <input type="text" name="ImageUrl" value="@Model.ImageUrl" />
+    <br />
+
+    <button type="submit">Güncelle</button>
+</form>
+
+<a href="/Home/Index">Geri Dön</a>
